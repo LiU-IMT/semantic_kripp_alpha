@@ -68,9 +68,11 @@ kripp.alpha.s <- function (x, method = c("nominal", "ordinal", "interval", "rati
                   diff2[ck] <- diff2[ck] + nc[k]/2
                   diff2[ck] <- diff2[ck]^2
                 }
+                # added to allow arbitrary difference function
 		if (method == "semantic") {
 			diff2[ck] <- (distMatrix[paste(dv[c]), paste("X", dv[k], sep="")])^2
                 }
+                # end addition
                 if (match(method[1], "interval", 0)) 
                   diff2[ck] <- (dv[c] - dv[k])^2
                 if (match(method[1], "ratio", 0)) 

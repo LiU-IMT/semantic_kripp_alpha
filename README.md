@@ -1,4 +1,4 @@
 semantic_kripp_alpha
 ====================
 
-A semantic Krippendorff's Alpha
+Implementation of semantic Krippendorff's Alpha in R and Matlab

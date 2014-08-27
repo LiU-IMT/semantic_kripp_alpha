@@ -4,6 +4,12 @@
 # Interrater Reliability and Agreement. R package version 0.84.
 # http://CRAN.R-project.org/package=irr
 
+# The distance matrix should be on the following form:
+# ,SCTID1,SCTID2,...,SCTIDn
+# SCTID1,0,distance(SCTID2, SCTID1),...,distance(SCTIDn, SCTID1)
+# ...
+# SCTIDn,distance(SCTID1, SCTIDn),...,0
+
 kripp.alpha.s <- function (x, method = c("nominal", "ordinal", "interval", "ratio", "semantic"), distMatrix) 
 {
     if (missing(x)) 
